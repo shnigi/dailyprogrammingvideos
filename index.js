@@ -34,27 +34,57 @@ const showPageNumber = () => {
 };
 showPageNumber();
 
+const goToChunk = () => {
+  const pageNumber = window.location.hash.split('=')[1] - 1;
+  if (!isNaN(pageNumber)) {
+    showVideos(pageNumber);
+    chunk = pageNumber;
+    showPageNumber();
+  }
+};
+goToChunk();
+
+const setUrlState = () => {
+  if (chunk === 0) {
+    history.pushState({
+    id: 0,
+    },
+    'The daily life of programmer',
+    '/');
+  } else {
+    history.pushState({
+      id: chunk + 1,
+    },
+    'The daily life of programmer',
+    `/#/page=${chunk + 1}`);
+  }
+}
+
 function menuFunction () {
   if (this.dataset.page === 'next') {
     if (chunk < (videoChunks.length - 1)) {
       chunk++;
       showVideos(chunk);
       showPageNumber();
+      setUrlState();
     }
   } else if (this.dataset.page === 'previous') {
     if (chunk !== 0) {
       chunk--;
       showVideos(chunk);
       showPageNumber();
+      setUrlState();
     }
   } else if (this.dataset.page === 'first') {
     chunk = 0;
     showVideos(chunk);
     showPageNumber();
+    setUrlState();
   } else if (this.dataset.page === 'last') {
     chunk = lastChunk - 1;
     showVideos(chunk);
     showPageNumber();
+    setUrlState();
   }
   if (this.dataset.bottomlink) {
     window.scrollTo(0, 0);
