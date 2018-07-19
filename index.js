@@ -4,7 +4,7 @@ const lastChunk = _.lastIndexOf(videoChunks);
 const navButton = document.querySelector('.toggleNav');
 const flexNav = document.querySelector('.flex-nav ul');
 const menuButtons = document.querySelectorAll('.menu-link');
-const pageNumber = document.querySelector('.page-number');
+const pageNumber = document.querySelectorAll('.page-number');
 let chunk = 0;
 
 const loopVideos = (chunk) =>
@@ -30,7 +30,7 @@ navButton.addEventListener('click', () => {
 });
 
 const showPageNumber = () => {
-  pageNumber.textContent = `Page: ${chunk + 1} / ${videoChunks.length}`;
+  pageNumber.forEach((page) => page.textContent = `Page: ${chunk + 1} / ${videoChunks.length}`);
 };
 showPageNumber();
 
