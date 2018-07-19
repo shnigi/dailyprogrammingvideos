@@ -2,12 +2,12 @@
 html {
   box-sizing: border-box;
   height: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat:no-repeat;
-    background: linear-gradient(360deg, #8fbb31 0%, #09b9fa 100%) fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background: linear-gradient(360deg, #8fbb31 0%, #09b9fa 100%) fixed;
 }
 
 *, *:before, *:after {
@@ -15,7 +15,9 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+  font-family: 'Shadows Into Light', cursive;
+  text-shadow: 1px 1px 4px rgba(150, 150, 150, 1);
   margin: 0;
 }
 

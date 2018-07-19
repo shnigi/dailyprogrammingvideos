@@ -1,6 +1,6 @@
 const videos = [{
   url: 'https://www.youtube.com/embed/zYt0WbDjJ4E',
-  name: 'When you complete a neat feature and client gives you feedback'
+  name: 'When you complete a neat feature and client gives you comments'
 },{
   url: 'https://www.youtube.com/embed/oXYZttxunPw',
   name: 'When your code doesn\'t work and you struggle to find the reason'
