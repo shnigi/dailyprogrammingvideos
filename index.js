@@ -33,20 +33,23 @@ function menuFunction () {
   if (this.dataset.page === 'next') {
     if (chunk < (videoChunks.length - 1)) {
       chunk++;
+      showVideos(chunk);
     }
   } else if (this.dataset.page === 'previous') {
     if (chunk !== 0) {
       chunk--;
+      showVideos(chunk);
     }
   } else if (this.dataset.page === 'first') {
     chunk = 0;
+    showVideos(chunk);
   } else if (this.dataset.page === 'last') {
     chunk = lastChunk - 1;
+    showVideos(chunk);
   }
   if (this.dataset.bottomlink) {
     window.scrollTo(0, 0);
   }
-  showVideos(chunk);
 };
 
 menuButtons.forEach(button => button.addEventListener('click', menuFunction));
