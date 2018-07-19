@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The daily programming videos</title>
+  <meta name="description" content="The daily programming videos">
+  <meta name="author" content="Niki Ahlskog">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="top">
+      <h1><a>The daily programming videos</a></h1>
+    </header>
+
+    <nav class="flex-nav">
+      <a href="#" class="toggleNav">☰ Menu</a>
+      <ul>
+        <li><a data-page="first" class="menu-link">First</a></li>
+        <li><a data-page="next" class="menu-link">Next</a></li>
+        <li><a data-page="previous" class="menu-link">Previous</a></li>
+        <li><a data-page="last" class="menu-link">Last</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <div class="videolist"></div>
+    </section>
+
+    <nav class="flex-nav">
+      <ul class="bottom-nav">
+        <li><a data-page="first" data-bottomlink="true" class="menu-link">First</a></li>
+        <li><a data-page="next" data-bottomlink="true" class="menu-link">Next</a></li>
+        <li><a data-page="previous" data-bottomlink="true" class="menu-link">Previous</a></li>
+        <li><a data-page="last" data-bottomlink="true" class="menu-link">Last</a></li>
+      </ul>
+    </nav>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
+  <script src="videos.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

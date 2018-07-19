@@ -1,0 +1,155 @@
+/* Some CSS Setup - nothing to do with flexbox */
+html {
+  box-sizing: border-box;
+  height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background: linear-gradient(360deg, #8fbb31 0%, #09b9fa 100%) fixed;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  /* overflow: hidden; */
+  max-width: 100%;
+  margin-bottom: 60px;
+}
+.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.videolist {
+  margin: 50px;
+}
+
+.top a {
+  color:white;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background:rgba(0,0,0,0.2);
+  padding:20px 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  cursor: default;
+}
+
+.flex-nav a {
+  color:white;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background:rgba(0,0,0,0.2);
+  padding:20px 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition:all 0.5s;
+}
+
+.flex-nav a:hover {
+  background:rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.flex-nav .toggleNav {
+  display: none;
+}
+
+img {
+  width:100%;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section {
+  text-align: center;
+  color:white;
+  font-weight: 100;
+}
+
+section a {
+  color:white;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+}
+
+iframe {
+  margin-top: 20px;
+}
+
+/* Flex Container */
+.flex-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display:flex;
+}
+
+/* Flex Item */
+.flex-nav li {
+  flex:3;
+}
+
+
+@media all and (max-width:1000px) {
+
+  .flex-nav ul {
+    flex-wrap:wrap;
+  }
+
+  .flex-nav li {
+    flex:1 1 50%;
+  }
+}
+
+
+/* This is where the magic Happens */
+
+@media all and (max-width:500px) {
+
+  .flex-nav li {
+    flex-basis:100%;
+  }
+
+  /* Turn on flexbox */
+  .wrapper {
+    display:flex;
+    flex-direction:column;
+  }
+
+.flex-nav .toggleNav {
+    display: block;
+  }
+
+  .flex-nav .bottom-nav {
+    display: block;
+  }
+
+  .flex-nav ul {
+    display: none;
+  }
+
+  .flex-nav ul.open {
+    display:flex;
+  }
+}
