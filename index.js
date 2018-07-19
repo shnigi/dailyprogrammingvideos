@@ -5,8 +5,8 @@ const navButton = document.querySelector('.toggleNav');
 const flexNav = document.querySelector('.flex-nav ul');
 const menuButtons = document.querySelectorAll('.menu-link');
 
-const loopVideos = (chunk) => {
-  return videoChunks[chunk].map(({url, name}) =>
+const loopVideos = (chunk) =>
+videoChunks[chunk].map(({url, name}) =>
   `
     <h2>${name}</h2>
     <div class="embed-container">
@@ -16,7 +16,6 @@ const loopVideos = (chunk) => {
       </iframe>
     </div>
   `);
-};
 
 const showVideos = (chunk) => {
   videoList.innerHTML = loopVideos(chunk).join('');
