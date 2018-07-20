@@ -27,5 +27,29 @@ const videos = [{
 {
   url: 'https://www.youtube.com/embed/lwoBfLTZxRE',
   name: 'Project manager requests a new impossible feature'
+},
+{
+  url: 'https://www.youtube.com/embed/GJDNkVDGM_s',
+  name: 'Project is behing the schedule all ready, new feature requests are coming in and you don\'t take any stress about it'
+},
+{
+  url: 'https://www.youtube.com/embed/N0JcL7pb0TY',
+  name: 'Trying to sneak for a lunch break but then you see project manager coming at you'
+},
+{
+  url: 'https://www.youtube.com/embed/dE-nfzcUiPk',
+  name: 'Suddenly the app crashes and all users experience it'
+},
+{
+  url: 'https://www.youtube.com/embed/j635NjTo0X0',
+  name: 'You focus on a really hard bug and then quickly look something else totally forgetting what you were doing'
+},
+{
+  url: 'https://www.youtube.com/embed/Ywg2-rKAstQ',
+  name: 'When the whole project is fucked up'
+},
+{
+  url: 'https://www.youtube.com/embed/NvOYv9c11hM',
+  name: 'Going nuts while setting up the project on localhost'
 }
 ];
