@@ -44,19 +44,20 @@ const goToChunk = () => {
 };
 goToChunk();
 
+//dailyprogramming jos tuotannossa!
 const setUrlState = () => {
   if (chunk === 0) {
     history.pushState({
     id: 0,
     },
     'The daily life of programmer',
-    '/');
+    '/dailyprogramming/');
   } else {
     history.pushState({
       id: chunk + 1,
     },
     'The daily life of programmer',
-    `/#/page=${chunk + 1}`);
+    `/dailyprogramming/#/page=${chunk + 1}`);
   }
 }
 
